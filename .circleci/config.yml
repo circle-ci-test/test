@@ -1,14 +1,14 @@
 version: 2.1
 jobs:
   build:
-    docker:
-      - image: manjarolinux/build
-    resource_class: small
+#     docker:
+#       - image: manjarolinux/build
+#     resource_class: small
     
     
-    # machine:
-    #       image: "ubuntu-2204:current"
-    # resource_class: medium
+    machine:
+          image: "ubuntu-2204:current"
+    resource_class: medium
     steps:
       - run: |
           sed -i 's/#Color/Color/g' /etc/pacman.conf
