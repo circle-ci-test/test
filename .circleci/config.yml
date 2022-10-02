@@ -20,7 +20,7 @@ jobs:
           pacman -Syu --noconfirm --color always
           pacman -Sy --noconfirm --color always --needed base-devel curl wget coreutils xterm git sudo yay asp bat socat colorgcc procps-ng nano nano-syntax-highlighting micro tree aria2 openssh man-db axel ffmpeg yt-dlp
       
-      - run: sudo -u builder yay -Sy --color always --noconfirm --builddir . --cleanafter paru-bin
+      - run: sudo -u builder yay -Sy --color always --noconfirm paru-bin
 
       - run: comand_to_fail
 workflows:
